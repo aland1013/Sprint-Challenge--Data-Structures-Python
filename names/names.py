@@ -66,6 +66,13 @@ for name in names_2:
     if bst.contains(name):
         duplicates.append(name)
 
+# alternate solution using sets and built-in intersection() method
+# this code executed in 0.009 seconds on my laptop
+# s1 = set(names_1)
+# s2 = set(names_2)
+
+# duplicates = s1.intersection(s2)
+
 end_time = time.time()
 print (f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
 print (f"runtime: {end_time - start_time} seconds")
